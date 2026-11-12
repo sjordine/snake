@@ -1,0 +1,21 @@
+[project]
+name = "snake"
+version = "0.1.0"
+description = "Core Snake game with pure-core architecture"
+requires-python = ">=3.12"
+dependencies = [
+    "pygame",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
