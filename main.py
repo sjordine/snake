@@ -66,7 +66,7 @@ def game_loop(renderer: TerminalRenderer) -> None:
             if direction is not None:
                 if is_quit(direction):
                     return
-                if is_restart(direction):
+                if is_restart(direction) or direction in ("\n", "\r"):
                     break
                 # Other keys: ignore
             time.sleep(0.01)
